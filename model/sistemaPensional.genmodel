@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/SistemaPensional/src-gen" creationIcons="false"
+    editDirectory="/SistemaPensional.edit/src-gen" editorDirectory="/SistemaPensional.editor/src-gen"
+    modelPluginID="SistemaPensional" modelName="SistemaPensional" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="10.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>sistemaPensional.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="SistemaPensional" disposableProviderFactory="true" ecorePackage="sistemaPensional.ecore#/">
+    <genClasses ecoreClass="sistemaPensional.ecore#//SistemaPensional">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sistemaPensional.ecore#//SistemaPensional/administradorapensiones"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sistemaPensional.ecore#//SistemaPensional/aportante"/>
+    </genClasses>
+    <genClasses ecoreClass="sistemaPensional.ecore#//Afiliado">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//Afiliado/tipoTrabajador"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//Afiliado/tipoAfiliacion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//Afiliado/numeroAfiliacion"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//Afiliado/nombre"/>
+    </genClasses>
+    <genClasses ecoreClass="sistemaPensional.ecore#//AdministradoraPensiones">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sistemaPensional.ecore#//AdministradoraPensiones/afiliado"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//AdministradoraPensiones/nit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//AdministradoraPensiones/razonSocial"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//AdministradoraPensiones/tipo"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//AdministradoraPensiones/sitioWeb"/>
+    </genClasses>
+    <genClasses ecoreClass="sistemaPensional.ecore#//Aportante">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//Aportante/identificador"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sistemaPensional.ecore#//Aportante/aporte"/>
+    </genClasses>
+    <genClasses ecoreClass="sistemaPensional.ecore#//Empresa"/>
+    <genClasses ecoreClass="sistemaPensional.ecore#//NoVinculado"/>
+    <genClasses ecoreClass="sistemaPensional.ecore#//FondoSolidaridad"/>
+    <genClasses ecoreClass="sistemaPensional.ecore#//Pensionado">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sistemaPensional.ecore#//Pensionado/pension"/>
+    </genClasses>
+    <genClasses ecoreClass="sistemaPensional.ecore#//Cotizante"/>
+    <genClasses ecoreClass="sistemaPensional.ecore#//Aporte">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sistemaPensional.ecore#//Aporte/cotizante"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//Aporte/numeroHoras"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//Aporte/monto"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute sistemaPensional.ecore#//Aporte/identificador"/>
+    </genClasses>
+    <genClasses ecoreClass="sistemaPensional.ecore#//Pension">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sistemaPensional.ecore#//Pension/beneficiaro"/>
+    </genClasses>
+    <genClasses ecoreClass="sistemaPensional.ecore#//Beneficiaro"/>
+  </genPackages>
+</genmodel:GenModel>
