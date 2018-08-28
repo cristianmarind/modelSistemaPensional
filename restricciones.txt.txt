@@ -1,0 +1,7 @@
+Dos Administradores de fondos no pueden tener asociado el mismo afiliado
+Un afiliado puede tener 0..* beneficiarios
+Un aporte debe de estar asociado únicamente a un Afiliado
+Sólo existe un Sistema de gestión de pensiones
+El monto de un aporte no puede ser inferior a 1
+El cotizante no puede tener menos de 0 semanas
+
