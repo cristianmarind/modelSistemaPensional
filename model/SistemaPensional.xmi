@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sistemaPensional:SistemaPensional
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:sistemaPensional="http://www.example.org/sistemaPensional"
+    xsi:schemaLocation="http://www.example.org/sistemaPensional sistemaPensional.ecore">
+  <administradorapensiones
+      nit="AP001"
+      razonSocial="Colpensiones"
+      tipo="publica"
+      sitioWeb="https://colpensiones.gov.co">
+    <afiliado
+        xsi:type="sistemaPensional:Pensionado"
+        tipoTrabajador="Dependiente"
+        tipoAfiliacion="Obligatorio"
+        numeroAfiliacion="P001"
+        nombre="Lady Hernandez">
+      <pension
+          titulo="Pension por vejez"
+          mensualidad="2000000.0"
+          id="PPD001">
+        <beneficiaro
+            nombre="Santiago Correa"
+            identificador="B001"
+            relacion="Hijo/Hija"/>
+      </pension>
+    </afiliado>
+    <afiliado
+        xsi:type="sistemaPensional:Cotizante"
+        tipoTrabajador="Independiente"
+        tipoAfiliacion="Opcional"
+        numeroAfiliacion="C001"
+        nombre="Jeison Martines"
+        semanas="105">
+      <aporte
+          cotizante="C001"
+          numeroHoras="10"
+          monto="120000.0"
+          id="A001"/>
+    </afiliado>
+    <afiliado
+        xsi:type="sistemaPensional:Cotizante"
+        tipoTrabajador="Dependiente"
+        tipoAfiliacion="Opcional"
+        numeroAfiliacion="C002"
+        nombre="Jhonatan Lopera"
+        semanas="90"/>
+  </administradorapensiones>
+  <aportante
+      xsi:type="sistemaPensional:Empresa"
+      identificador="AE001">
+    <aporte
+        cotizante="C001"
+        numeroHoras="15"
+        monto="500000.0"
+        id="A002"/>
+  </aportante>
+  <aportante
+      xsi:type="sistemaPensional:NoVinculado"
+      identificador="ANV001">
+    <aporte
+        cotizante="C002"
+        numeroHoras="20"
+        monto="800000.0"
+        id="A003"/>
+  </aportante>
+  <aportante
+      xsi:type="sistemaPensional:FondoSolidaridad"
+      identificador="AFS001">
+    <aporte
+        cotizante="C001"
+        numeroHoras="10"
+        monto="1000000.0"
+        id="A005"/>
+  </aportante>
+</sistemaPensional:SistemaPensional>
